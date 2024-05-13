@@ -1,5 +1,7 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
+import "devicon/devicon.min.css";
+
+import NavBar from "./components/NavBar";
 
 export const metadata = {
   title: "Sze Tyng Lee",
@@ -9,7 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,0 +1,28 @@
+.icon-fsharp {
+    background: url("../assets/images/skills-icons/fsharp.svg");
+  }
+
+.icon-python {
+    background: no-repeat center/100%
+    url("../assets/images/skills-icons/python.svg");
+}
+
+.icon-googlecloudplatform {
+    background: no-repeat center/100%
+    url("../assets/images/skills-icons/google-cloud-platform.svg");
+}
+
+.icon-nuxtjs {
+    background: no-repeat center/100%
+    url("../assets/images/skills-icons/nuxt.svg");
+}
+
+.icon-fastapi {
+    background: no-repeat center/100%
+    url("../assets/images/skills-icons/fastapi.png");
+}
+
+.icon-solidity {
+    background: no-repeat center/100%
+    url("../assets/images/skills-icons/solidity.png");
+}
