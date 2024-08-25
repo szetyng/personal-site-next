@@ -14,7 +14,7 @@ const ProjectCard = ({ title, description, image, repoLink, links = [] }) => {
       <div className="bg-white rounded flex flex-col border">
         <div className="relative overflow-hidden border-b h-72">
           <div
-            className="flex flex-col items-center h-full cursor-pointer select-none"
+            className="flex flex-col items-center h-full cursor-pointer select-none group hover:bg-off-white/60"
             onClick={() => setShowDescription(true)}
           >
             <Image
@@ -65,7 +65,12 @@ const ProjectCard = ({ title, description, image, repoLink, links = [] }) => {
         </div>
 
         <div className="flex flex-col px-4 my-4 gap-3">
-          <h3 className="text-xl font-medium px-2 lowercase">{title}</h3>
+          <h3
+            className="text-xl font-medium px-2 lowercase cursor-pointer hover:font-bold"
+            onClick={() => setShowDescription(!showDescription)}
+          >
+            {title}
+          </h3>
           <a
             href={repoLink}
             target="__blank"

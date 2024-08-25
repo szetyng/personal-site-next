@@ -55,12 +55,30 @@ const Home = () => {
     { text: "vuejs", link: "devicon-vuejs-plain-wordmark" },
   ];
 
+  const renderAnySkill = (skill) => {
+    let skillDiv;
+    if (skill.link) {
+      skillDiv = renderDevIcon(skill.link);
+    } else {
+      skillDiv = renderSvg(skill.text);
+    }
+
+    return (
+      <div className="flex flex-col gap-1 items-center justify-center group">
+        {skillDiv}
+        <p className="text-center text-xs font-bold invisible group-hover:visible">
+          {skill.text}
+        </p>
+      </div>
+    );
+  };
+
   const renderSvg = (name) => (
-    <i className={`h-[50px] w-[50px] inline-block icon-${name}`}></i>
+    <i key={name} className={`h-[50px] w-[50px] inline-block icon-${name}`}></i>
   );
 
   const renderDevIcon = (name) => (
-    <div className="w-[50px] text-[50px]">
+    <div key={name} className="w-[50px] text-[50px]">
       <i className={`inline-block ${name} colored`}></i>
     </div>
   );
@@ -136,9 +154,7 @@ const Home = () => {
               <h1 className="text-2xl font-semibold">skills</h1>
             </div>
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 md:w-3/5 leading-10">
-              {skills.map((skill) =>
-                skill.link ? renderDevIcon(skill.link) : renderSvg(skill.text)
-              )}
+              {skills.map((skill) => renderAnySkill(skill))}
             </div>
           </div>
         </div>
