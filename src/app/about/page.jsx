@@ -1,5 +1,9 @@
-"use client";
 import profilePic from "../../assets/images/bios/szetyng-sq.png";
+
+export const metadata = {
+  title: "About",
+  description: "Sze Tyng Lee's about page",
+};
 
 const AboutMe = () => {
   const socials = [

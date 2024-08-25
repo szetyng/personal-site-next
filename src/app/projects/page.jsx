@@ -1,5 +1,9 @@
-"use client";
 import ProjectCard from "../components/ProjectCard.jsx";
+
+export const metadata = {
+  title: "Projects",
+  description: "A list of projects that Sze Tyng has worked on",
+};
 
 const Projects = () => {
   const projectList = [
