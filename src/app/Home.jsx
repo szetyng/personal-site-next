@@ -93,7 +93,7 @@ const Home = () => {
                   kuala lumpur, malaysia
                 </span>
                 . feel free to wander around and let me know what you think.
-                this site was built using react + vite by yours truly.
+                this site was built using react + nextjs by yours truly.
               </p>
               <p className="text-justify">
                 it started off as a <strong>portfolio</strong> to showcase some

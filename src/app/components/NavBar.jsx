@@ -4,7 +4,7 @@ const NavBar = () => {
   const navLinks = [
     {
       text: "about me",
-      path: "/about-me",
+      path: "/about",
     },
     {
       text: "projects",
