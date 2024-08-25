@@ -1,3 +1,4 @@
+"use client";
 import profilePic from "../../assets/images/bios/szetyng-sq.png";
 
 const AboutMe = () => {
@@ -45,6 +46,7 @@ const AboutMe = () => {
                     href={social.link}
                     target="_blank"
                     className="mr-2 pb-1 hover:pb-0 hover:border-b border-dashed border-b-off-blue hover:text-off-blue"
+                    key={social.link}
                   >
                     <span className={`font-semibold text-sm`}>
                       {social.text}

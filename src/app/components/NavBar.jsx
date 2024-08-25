@@ -1,6 +1,10 @@
+"use client";
+import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 
 const NavBar = () => {
+  const pathname = usePathname();
   const navLinks = [
     {
       text: "about me",
@@ -12,7 +16,8 @@ const NavBar = () => {
     },
     {
       text: "blog",
-      path: "/about-me",
+      path: "/blog",
+      disabled: true,
     },
   ];
 
@@ -30,7 +35,14 @@ const NavBar = () => {
           <div className="grow"></div>
           {navLinks.map((link) => {
             return (
-              <Link href={link.path} className="font-bold hover:text-off-blue">
+              <Link
+                href={link.path}
+                className={`font-bold hover:text-off-blue ${
+                  pathname === link.path ? "text-off-blue" : ""
+                }`}
+                disabled={true}
+                key={link.path}
+              >
                 {link.text}
               </Link>
             );

@@ -197,6 +197,7 @@ const Projects = () => {
                   image={project.imgSrc}
                   description={project.description}
                   repoLink={project.url}
+                  links={project.links}
                   key={project.title}
                 />
               );
