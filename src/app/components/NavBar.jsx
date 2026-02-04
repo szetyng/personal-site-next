@@ -27,7 +27,7 @@ const NavBar = () => {
         <div className="flex py-4 md:px-20 px-8 max-w-7xl w-full">
           <div className="w-2/5">
             <Link href="/">
-              <h1 className="font-bold text-2xl  hover:text-off-blue">
+              <h1 className="font-bold text-2xl  hover:text-neon-magenta">
                 sze tyng lee
               </h1>
             </Link>
@@ -38,8 +38,8 @@ const NavBar = () => {
               return (
                 <Link
                   href={link.path}
-                  className={`font-bold hover:text-off-blue ${
-                    pathname === link.path ? "text-off-blue" : ""
+                  className={`font-bold hover:text-neon-magenta ${
+                    pathname === link.path ? "text-neon-magenta" : ""
                   }`}
                   disabled={true}
                   key={link.path}

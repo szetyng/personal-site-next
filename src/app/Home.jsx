@@ -40,18 +40,22 @@ const Home = () => {
   const skills = [
     // {text: 'android', link: 'devicon-android-plain'},
     // {text: 'bootstrap', link: 'devicon-bootstrap-plain-wordmark'},
-    { text: "cplusplus", link: "devicon-cplusplus-plain-wordmark" },
+    // { text: "cplusplus", link: "devicon-cplusplus-plain-wordmark" },
+    { text: "docker", link: "devicon-docker-plain-wordmark" },
     { text: "fastapi" },
-    { text: "fsharp" },
+    // { text: "fsharp" },
     { text: "git", link: "devicon-git-plain" },
+    { text: "golang", link: "devicon-go-original-wordmark" },
     { text: "googlecloudplatform" },
     { text: "javascript", link: "devicon-javascript-plain" },
+    { text: "mongodb", link: "devicon-mongodb-plain-wordmark" },
     { text: "nodejs", link: "devicon-nodejs-plain-wordmark" },
     // {text: 'nuxtjs'},
     { text: "postgresql", link: "devicon-postgresql-plain-wordmark" },
     { text: "python" },
-    { text: "react", link: "devicon-react-original-wordmark colored" },
-    { text: "solidity" },
+    { text: "react", link: "devicon-react-original-wordmark" },
+    // { text: "solidity" },
+    { text: "typescript", link: "devicon-typescript-plain" },
     { text: "vuejs", link: "devicon-vuejs-plain-wordmark" },
   ];
 
@@ -64,7 +68,10 @@ const Home = () => {
     }
 
     return (
-      <div className="flex flex-col gap-1 items-center justify-center group">
+      <div
+        key={skill.text}
+        className="flex flex-col gap-1 items-center justify-center group"
+      >
         {skillDiv}
         <p className="text-center text-xs font-bold invisible group-hover:visible">
           {skill.text}
@@ -103,12 +110,12 @@ const Home = () => {
               <p className="text-justify">
                 hi there! i'm <strong>sze tyng</strong>, an m.eng electrical and
                 electronic engineering graduate from&nbsp;
-                <span className="text-blue-500 font-semibold">
+                <span className="text-blue-nine font-semibold">
                   imperial college london
                 </span>
                 . i am now a&nbsp;
                 <strong>software developer</strong> currently based in&nbsp;
-                <span className="text-blue-500 font-semibold">
+                <span className="text-blue-nine font-semibold">
                   kuala lumpur, malaysia
                 </span>
                 . feel free to wander around and let me know what you think.
@@ -124,7 +131,7 @@ const Home = () => {
                 my cv is available upon request, just drop me a message at&nbsp;
                 <a
                   href="mailto:lee.szetyng@gmail.com"
-                  className="border-b border-dashed border-b-text-default hover:text-off-blue hover:font-semibold"
+                  className="border-b border-dashed border-b-text-default hover:text-neon-magenta hover:font-semibold"
                 >
                   lee.szetyng@gmail.com
                 </a>
@@ -136,7 +143,7 @@ const Home = () => {
                     <a
                       href={social.link}
                       target="_blank"
-                      className="mr-2 pb-1 hover:pb-0 hover:border-b border-dashed border-b-off-blue hover:text-off-blue"
+                      className="mr-2 pb-1 hover:pb-0 hover:border-b border-dashed border-b-neon-magenta hover:text-neon-magenta"
                       key={social.link}
                     >
                       <span className={`font-semibold text-sm`}>

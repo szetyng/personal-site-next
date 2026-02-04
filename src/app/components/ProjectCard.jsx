@@ -28,7 +28,7 @@ const ProjectCard = ({ title, description, image, repoLink, links = [] }) => {
 
           {showDescription && (
             <button
-              className="top-3 right-3 absolute rounded-full px-2 py-0 z-10 hover:bg-shadow-light"
+              className="top-3 right-3 absolute rounded-full px-2 py-0 z-10 hover:bg-mint-green"
               onClick={() => setShowDescription(false)}
             >
               <span className="text-xl font-bold">x</span>
@@ -52,7 +52,7 @@ const ProjectCard = ({ title, description, image, repoLink, links = [] }) => {
                     <a
                       href={l.url}
                       target="__blank"
-                      className={`py-1 hover:border-b border-dashed border-b-off-blue hover:text-off-blue lowercase text-sm font-semibold`}
+                      className={`py-1 hover:border-b border-dashed border-b-neon-magenta hover:text-neon-magenta lowercase text-sm font-semibold`}
                     >
                       {l.title}
                     </a>
@@ -74,7 +74,7 @@ const ProjectCard = ({ title, description, image, repoLink, links = [] }) => {
           <a
             href={repoLink}
             target="__blank"
-            className="py-1 px-2 w-fit hover:bg-orange-700 hover:bg-opacity-10 text-orange-700 text-sm font-semibold rounded"
+            className="py-1 px-2 w-fit hover:bg-mint-green/10 hover:bg-opacity-10 text-mint-green text-sm font-semibold rounded"
           >
             github
           </a>
