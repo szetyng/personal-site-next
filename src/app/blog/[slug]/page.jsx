@@ -34,7 +34,7 @@ export default function BlogPost({ params }) {
               day: "numeric",
             })}
           </time>
-          <h1 className="text-4xl font-bold mt-2 mb-3">{post.title}</h1>
+          <h1 className="text-2xl font-bold mt-2 mb-3 ">{post.title}</h1>
           {post.subtitle && (
             <p className="text-xl text-text-subtitle">{post.subtitle}</p>
           )}
@@ -65,13 +65,13 @@ export default function BlogPost({ params }) {
             rehypePlugins={[rehypeRaw]}
             components={{
               h1: ({ children }) => (
-                <h1 className="text-3xl font-bold mt-8 mb-4">{children}</h1>
+                <h1 className="text-2xl font-bold mt-8 mb-4">{children}</h1>
               ),
               h2: ({ children }) => (
-                <h2 className="text-2xl font-bold mt-6 mb-3">{children}</h2>
+                <h2 className="text-lg font-bold mt-6 mb-3">{children}</h2>
               ),
               h3: ({ children }) => (
-                <h3 className="text-xl font-bold mt-4 mb-2">{children}</h3>
+                <h3 className="text-base font-bold mt-4 mb-2">{children}</h3>
               ),
               p: ({ children, ...props }) => (
                 <p className="mb-4 leading-relaxed text-justify" {...props}>
@@ -99,7 +99,7 @@ export default function BlogPost({ params }) {
               a: ({ children, href }) => (
                 <a
                   href={href}
-                  className="text-neon-magenta hover:underline"
+                  className="text-neon-magenta hover:border-b border-dashed border-b-neon-magenta"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

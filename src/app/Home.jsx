@@ -1,9 +1,13 @@
-"use client";
 import profilePic from "../assets/images/bios/szetyng-sq.png";
+import { getIntroContent } from "@/lib/markdown";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 import "./Home.css";
 
 const Home = () => {
+  const introData = getIntroContent();
+
   const getImgUrl = (name) => {
     let url = new URL(`../assets/images/skills-icons/${name}`, import.meta.url)
       .href;
@@ -107,36 +111,31 @@ const Home = () => {
               </h2>
             </div>
             <div className="flex flex-col gap-2 md:w-3/5 w-full">
-              <p className="text-justify">
-                hi there! i'm <strong>sze tyng</strong>, an m.eng electrical and
-                electronic engineering graduate from&nbsp;
-                <span className="text-blue-nine font-semibold">
-                  imperial college london
-                </span>
-                . i am now a&nbsp;
-                <strong>software developer</strong> currently based in&nbsp;
-                <span className="text-blue-nine font-semibold">
-                  kuala lumpur, malaysia
-                </span>
-                . feel free to wander around and let me know what you think.
-                this site was built using react + nextjs by yours truly.
-              </p>
-              <p className="text-justify">
-                it started off as a <strong>portfolio</strong> to showcase some
-                of my personal projects, and i eventually added a blog section
-                to share some of my thoughts and musings with the world wide
-                web!
-              </p>
-              <p className="text-justify break-words">
-                my cv is available upon request, just drop me a message at&nbsp;
-                <a
-                  href="mailto:lee.szetyng@gmail.com"
-                  className="border-b border-dashed border-b-text-default hover:text-neon-magenta hover:font-semibold"
-                >
-                  lee.szetyng@gmail.com
-                </a>
-                &nbsp;or contact me on any of the platforms linked below.
-              </p>
+              <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                  p: ({ children }) => (
+                    <p className="mb-2 lowercase">{children}</p>
+                  ),
+                  span: ({ children }) => (
+                    <span className="text-blue-nine lowercase font-semibold">
+                      {children}
+                    </span>
+                  ),
+                  a: ({ children, href }) => (
+                    <a
+                      href={href}
+                      className="text-neon-magenta hover:border-b border-dashed border-b-neon-magenta"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {children}
+                    </a>
+                  ),
+                }}
+              >
+                {introData.content}
+              </ReactMarkdown>
               <div className="flex flex-wrap gap-2 mt-1">
                 {socials.map((social) => {
                   return (

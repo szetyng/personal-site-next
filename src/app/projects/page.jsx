@@ -30,6 +30,7 @@ const Projects = () => {
       ],
       imgSrc: "spotify-page.png",
       expand: false,
+      skills: ["Python", "Data Analysis"],
     },
     {
       title: "WW Metaverse Slayer",
@@ -50,6 +51,7 @@ const Projects = () => {
       ],
       imgSrc: "metaverse-slayer.png",
       expand: false,
+      skills: ["Web3", "React.js"],
     },
     {
       title: "Guardrails",
@@ -71,6 +73,7 @@ const Projects = () => {
       ],
       imgSrc: "institution.jpg",
       expand: false,
+      skills: ["F#", "University"],
     },
     {
       title: "CaterPillar",
@@ -91,6 +94,7 @@ const Projects = () => {
       ],
       imgSrc: "caterpillar.png",
       expand: false,
+      skills: ["Android", "University"],
     },
     {
       title: "neuron",
@@ -111,6 +115,7 @@ const Projects = () => {
       ],
       imgSrc: "neuron.png",
       expand: false,
+      skills: ["TypeScript", "University"],
     },
     {
       title: "Spam Detection",
@@ -121,6 +126,7 @@ const Projects = () => {
       url: "https://github.com/szetyng/machine-learning-spam",
       imgSrc: "laptop.png",
       expand: false,
+      skills: ["Python", "Machine Learning", "University"],
     },
     {
       title: "ARM Emulator",
@@ -134,6 +140,7 @@ const Projects = () => {
       url: "https://github.com/szetyng/HLP5",
       imgSrc: "arm-emulator.png",
       expand: false,
+      skills: ["F#", "University"],
     },
     {
       title: "AceCaddie",
@@ -152,6 +159,7 @@ const Projects = () => {
       ],
       imgSrc: "acecaddie.png",
       expand: false,
+      skills: ["Python", "IoT", "University"],
     },
     {
       title: "SortBot",
@@ -176,6 +184,7 @@ const Projects = () => {
       ],
       imgSrc: "sortbot.png",
       expand: false,
+      skills: ["Python", "Computer Vision", "University"],
     },
     {
       title: "2048",
@@ -186,14 +195,15 @@ const Projects = () => {
       url: "https://github.com/szetyng/2048",
       imgSrc: "2048.png",
       expand: false,
+      skills: ["C++", "University"],
     },
   ];
 
   return (
     <>
       <div className="flex justify-center">
-        <div className="md:px-20 px-8 max-w-7xl">
-          <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="md:px-20 px-8 max-w-7xl w-full">
+          <div className="flex flex-col">
             {projectList.map((project) => {
               return (
                 <ProjectCard
@@ -202,6 +212,7 @@ const Projects = () => {
                   description={project.description}
                   repoLink={project.url}
                   links={project.links}
+                  skills={project.skills}
                   key={project.title}
                 />
               );

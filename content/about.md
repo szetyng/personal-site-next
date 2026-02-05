@@ -4,14 +4,15 @@ description: Learn more about Sze Tyng Lee
 image: szetyng-sq.png
 ---
 
-I am an electrical and electronic engineering graduate from Imperial College London. Throughout my four years in university, I have developed a keen interest in software development. One of my fondest collaborations from my time in Imperial was a project with Microsoft to build a Visual Studio Code extension geared towards data scientists. It provided notebook-like functionalities within the code editor itself, and has since been integrated with Microsoft's official Python extension as part of its data science features!
+I’m a full-stack software developer at Double Eleven, working in the Systems Development team. We build internal tools that help teams across the studio work more efficiently throughout the game development process.
 
-I am now a software developer in Double Eleven, where I am part of the Systems Development team. We build tools to help improve productivity for all departments across multiple aspects of game development; among them is an end-to-end data visualisation platform for game analytics, built using BigQuery, PostgreSQL, Express.js and Vue, running on Google Cloud Platform.
+I previously studied Electrical and Electronic Engineering at Imperial College London, where I gradually pivoted towards software and realised that building things with code was what I enjoyed most.
 
-Some of my interests include contemporary musicals, reading, history and coffee. In my free time nowadays, I like experimenting with filter coffee. I started brewing my own coffee in my fourth year of uni, having decided that I've been spending too much money on flat whites from the library cafe! My first brewer was an Aeropress, but I very quickly got myself a V60 dripper and after a couple of years, I am now a proud owner of a French press.
+Outside of work (you can learn more about my work experiences [here](https://www.linkedin.com/in/leeszetyng/)), I’m a big fan of contemporary musicals. I spent a lot of time exploring London’s theatre scene while I was at university, and I still jump at the chance to watch a show whenever I can.
 
-I also like to write. I have been keeping a journal since my first year of university, and I took a creative writing class back in 2018. Writing is not something that I do often anymore, but I would like to get it started again so I am challenging myself to write by adding a blog section to my website.
+I also enjoy weight training and running, and today’s fitness tech scene somehow lets me combine my passion for data visualisation with my goal of improving my personal health.
 
-As software developers, our careers truly involve lifelong learning as new technologies keep coming into play every year. Sometimes it's not even about new technologies, but old, time-tested fundamentals that are new to us either because we have just stumbled upon them or their importance has recently become known to us. Either way, whatever it is that I'm learning, I am going to write about it in my blog - partly for me, since writing things down helps me better understand the material, and partly for whoever is going to encounter the same topic in the future.
+My other interests include coffee, reading and listening to way too much music while having no musical talent whatsoever.
 
-Anyway, that's enough about me for now! Feel free to contact me at lee.szetyng@gmail.com if you would like to take a look at my CV.
+If you’d like to get in touch or take a look at my CV, you can reach me at [lee.szetyng@gmail.com](mailto:lee.szetyng@gmail.com) or any of my socials linked above!
+

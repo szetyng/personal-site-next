@@ -51,3 +51,14 @@ export const getAboutContent = () => {
     ...data,
   };
 };
+
+export const getIntroContent = () => {
+  const fullPath = path.join(process.cwd(), "content/home-intro.md");
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+
+  return {
+    content,
+    ...data,
+  };
+};

@@ -4,80 +4,74 @@ import Image from "next/image";
 
 import "./ProjectCard.css";
 
-const ProjectCard = ({ title, description, image, repoLink, links = [] }) => {
-  const [showDescription, setShowDescription] = useState(false);
-
+const ProjectCard = ({
+  title,
+  description,
+  image,
+  repoLink,
+  skills = [],
+  links = [],
+}) => {
   const imageUrl = require(`../../assets/images/portfolio/${image}`).default;
 
   return (
     <>
-      <div className="bg-white rounded flex flex-col border">
-        <div className="relative overflow-hidden border-b h-72">
-          <div
-            className="flex flex-col items-center h-full cursor-pointer select-none group hover:bg-off-white/60"
-            onClick={() => setShowDescription(true)}
+      <div className="flex flex-col md:flex-row gap-8 w-full px-4 pb-12 pt-4 border-b">
+        <div className="flex flex-col gap-2 w-full md:w-2/5">
+          <a
+            href={repoLink}
+            target="__blank"
+            className="flex gap-1 items-center group hover:text-mint-green text-sm font-semibold rounded"
           >
+            <h3 className="text-xl font-medium lowercase">{title}</h3>
+            <span className="group-hover:pb-2 group-hover:font-bold transition-all">
+              ↗
+            </span>
+          </a>
+
+          <div className="flex items-center h-full select-none w-full">
             <Image
               src={imageUrl}
               alt={`Cover image for ${title} project`}
               height={245}
               className="object-contain my-auto mx-auto rounded"
-              onClick={() => setShowDescription(true)}
             />
-          </div>
-
-          {showDescription && (
-            <button
-              className="top-3 right-3 absolute rounded-full px-2 py-0 z-10 hover:bg-mint-green"
-              onClick={() => setShowDescription(false)}
-            >
-              <span className="text-xl font-bold">x</span>
-            </button>
-          )}
-
-          <div
-            className={`absolute left-0 w-full h-full bg-white p-8 rounded overflow-y-auto transition-translate duration-300 top-full ${
-              showDescription ? "-translate-y-full" : ""
-            }`}
-          >
-            <p
-              className="project-description text-justify"
-              dangerouslySetInnerHTML={{ __html: description }}
-            ></p>
-
-            <div className="flex gap-2 mt-4 -mb-4">
-              {links.map((l) => {
-                return (
-                  <Fragment key={l.url}>
-                    <a
-                      href={l.url}
-                      target="__blank"
-                      className={`py-1 hover:border-b border-dashed border-b-neon-magenta hover:text-neon-magenta lowercase text-sm font-semibold`}
-                    >
-                      {l.title}
-                    </a>
-                    <div className="border-r border-text-subtitle my-1 last:hidden"></div>
-                  </Fragment>
-                );
-              })}
-            </div>
           </div>
         </div>
 
-        <div className="flex flex-col px-4 my-4 gap-3">
-          <h3
-            className="text-xl font-medium px-2 lowercase cursor-pointer hover:font-bold"
-            onClick={() => setShowDescription(!showDescription)}
-          >
-            {title}
-          </h3>
-          <a
-            href={repoLink}
-            target="__blank"
-            className="py-1 px-2 w-fit hover:bg-mint-green/10 hover:bg-opacity-10 text-mint-green text-sm font-semibold rounded"
-          >
-            github
-          </a>
+        <div className="flex flex-col gap-2 w-full md:w-3/5">
+          <div className="flex gap-2">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="bg-mint-green/10 text-mint-green text-xs font-semibold py-1 px-2 rounded-full lowercase"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          <p
+            className="project-description text-justify"
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></p>
+
+          <div className="flex gap-2 mt-4 -mb-4">
+            {links.map((l) => {
+              return (
+                <Fragment key={l.url}>
+                  <a
+                    href={l.url}
+                    target="__blank"
+                    className={`py-1 hover:border-b border-dashed border-b-neon-magenta hover:text-neon-magenta lowercase text-sm font-semibold`}
+                  >
+                    {l.title}
+                  </a>
+                  <div className="border-r border-text-subtitle my-1 last:hidden"></div>
+                </Fragment>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>

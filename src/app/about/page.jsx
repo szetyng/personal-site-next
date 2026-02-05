@@ -40,7 +40,7 @@ const AboutMe = () => {
   return (
     <>
       <div className="flex justify-center">
-        <div className="md:px-20 px-8 flex flex-wrap max-w-7xl">
+        <div className="md:px-20 px-8 flex flex-col md:flex-row gap-6 max-w-7xl">
           <div className="flex flex-col md:w-2/5 w-full items-center">
             <img
               src={profilePic.src}
@@ -64,7 +64,7 @@ const AboutMe = () => {
               })}
             </div>
           </div>
-          <div className="flex flex-col gap-2 text-justify md:w-3/5 mt-6 md:mt-0">
+          <div className="text-justify md:w-3/5 mt-6 md:mt-0">
             <ReactMarkdown
               components={{
                 p: ({ children }) => <p className="mb-2">{children}</p>,
@@ -73,6 +73,16 @@ const AboutMe = () => {
                 ),
                 h2: ({ children }) => (
                   <h2 className="text-2xl font-bold mb-3">{children}</h2>
+                ),
+                a: ({ children, href }) => (
+                  <a
+                    href={href}
+                    className="text-neon-magenta hover:border-b border-dashed border-b-neon-magenta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {children}
+                  </a>
                 ),
               }}
             >
